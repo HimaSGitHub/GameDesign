@@ -1,4 +1,3 @@
-console.log("")
 let turn = "X"
 let gameover =false;
 const changeTurn = ()=>{
@@ -26,10 +25,8 @@ const checkWin = ()=>{
 
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element =>{
-    console.log("elemnt");
     let boxtext = element.querySelector('.boxtext');
     element.addEventListener('click', ()=>{
-        console.log(" box is clicked ");
         if(boxtext.innerText === ''){
             boxtext.innerText = turn;
             turn = changeTurn();
